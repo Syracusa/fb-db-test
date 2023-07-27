@@ -1,0 +1,10 @@
+:host {
+    display: block;
+}
+
+.item {
+    background-color: aliceblue;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
