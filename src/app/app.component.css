@@ -32,7 +32,7 @@ app-new-task {
 }
 
 .empty-label {
-    font-size: 2em;
+    font-size: 10px;
     padding-top: 10px;
     text-align: center;
     opacity: 0.2;
