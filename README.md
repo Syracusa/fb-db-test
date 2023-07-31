@@ -7,7 +7,7 @@
   + https://github.com/angular/angularfire/blob/master/docs/auth.md#authentication
 
 
-# Make src/private-info.ts
+# Make src/environments/private-info.ts
 export const PrivateConf = {
     apiKey: ""
     authDomain: "",
