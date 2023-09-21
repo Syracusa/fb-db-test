@@ -20,6 +20,7 @@ import { environment } from '../environments/environment';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
+import { provideFunctions,getFunctions } from '@angular/fire/functions';
 
 @NgModule({
   declarations: [
@@ -36,11 +37,12 @@ import { getAuth, provideAuth } from '@angular/fire/auth';
     MatCardModule,
     MatInputModule,
     MatDialogModule,
-    
+
     DragDropModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
     provideAuth(() => getAuth()),
+    provideFunctions(() => getFunctions()),
   ],
   providers: [],
   bootstrap: [AppComponent]
