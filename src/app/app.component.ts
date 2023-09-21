@@ -22,7 +22,7 @@ export class AppComponent {
       width: '270px',
       data: {
         task: {
-          viewCount: 0,
+          count: 0,
         },
       },
     });
@@ -38,6 +38,7 @@ export class AppComponent {
   }
 
   editTask(list: 'done' | 'todo' | 'inProgress', task: Task): void {
+    this.fbconn.incrementViewCount(task, list);
     const dialogRef = this.dialog.open(TaskDialogComponent, {
       width: '270px',
       data: {

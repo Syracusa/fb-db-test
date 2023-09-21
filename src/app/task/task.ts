@@ -2,6 +2,6 @@ export interface Task {
     id?: string;
     title: string;
     description: string;
-    viewCount: number;
+    count: number;
     date?: Date;
   }

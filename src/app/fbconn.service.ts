@@ -69,14 +69,14 @@ export class FbconnService {
     });
     console.log(this.functions);
 
-    const addMessage = httpsCallable(this.functions, 'getGreeting');
-    addMessage()
-      .then((result) => {
-        console.log('result', result);
-      })
-      .catch((error) => {
-        console.log('error', error);
-      });
+    // const addMessage = httpsCallable(this.functions, 'getGreeting');
+    // addMessage()
+    //   .then((result) => {
+    //     console.log('result', result);
+    //   })
+    //   .catch((error) => {
+    //     console.log('error', error);
+    //   });
   }
 
   login(): void {
@@ -145,8 +145,13 @@ export class FbconnService {
   }
 
   incrementViewCount(task: Task, board:string): void {
-    updateDoc(doc(collection(this.store, board), task.id), {
-      viewCount: increment(1),
-    });
+    const addMessage = httpsCallable(this.functions, 'addCount');
+    addMessage({id: task.id, board: board})
+      .then((result) => {
+        console.log('result', result);
+      })
+      .catch((error) => {
+        console.log('error', error);
+      });
   }
 }
