@@ -1,0 +1,33 @@
+.slide-flow-container {
+    width: 1920px;
+    height: 285px;
+    border: 1px solid #aaa;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-flow-content {
+    width: 450px;
+    height: 285px;
+    border: 1px solid #000;
+    position: absolute;
+}
+
+
+.slide-overlay-content {
+    width: 450px;
+    height: 285px;
+    background-color: antiquewhite;
+    position: absolute;
+
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.slide-overlay-content:hover {
+    opacity: 0.8;
+}

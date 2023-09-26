@@ -21,12 +21,14 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
 import { provideFunctions,getFunctions } from '@angular/fire/functions';
+import { SlideFlowComponent } from './slide-flow/slide-flow.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskComponent,
-    TaskDialogComponent
+    TaskDialogComponent,
+    SlideFlowComponent
   ],
   imports: [
     BrowserModule,
